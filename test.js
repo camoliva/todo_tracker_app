@@ -13,3 +13,18 @@ function testCreateTaskElement_clickTogglesCompleted() {
 
 // Run the test
 testCreateTaskElement_clickTogglesCompleted();
+
+function testCreateTaskElement_hasDeleteButton() {
+    const taskItem = createTaskElement("Sample Task");
+
+    // Check if the delete button is there
+    const deleteBtn = taskItem.querySelector(".delete-btn");
+
+    if (!deleteBtn) {
+        console.error(" test failed: No delete button.");
+    } else {
+        console.log("  Test passed: Delete button is there.");
+    }
+}
+// Run
+testCreateTaskElement_hasDeleteButton();
